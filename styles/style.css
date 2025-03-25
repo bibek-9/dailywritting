@@ -1,0 +1,172 @@
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      color: #333;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #007BFF;
+    }
+    
+    /* Header Styles */
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav li {
+      margin: 0 15px;
+    }
+    nav li a {
+      font-weight: 700;
+      font-size: 1em;
+      padding: 8px 12px;
+      border-radius: 5px;
+    }
+    nav li a:hover {
+      background-color: #007BFF;
+      color: #fff;
+    }
+       
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+      nav li {
+        margin: 5px;
+      }
+      main {
+        padding: 30px 15px;
+      }
+    }
+
+
+
+
+    /* Miain starts from here */
+
+
+    main {
+      padding: 40px 20px;
+      background: #fff;
+      border-radius: 8px;
+      margin: 20px auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+    #features h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    #features p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    .features-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .feature {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+    .feature img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .feature h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .feature p {
+      font-size: 1em;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .features-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+
+
+
+    /* write dairy page  */
+
+    .container {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        width: 500px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+    input, textarea, button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    button {
+        background-color: #28a745;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        margin-top: 15px;
+    }
+    button:hover {
+        background-color: #218838;
+    }

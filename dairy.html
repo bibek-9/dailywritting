@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write Dairy Entry</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Write Your Daily Entry</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="entries.html">View Entries</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main class="container">
+            <h2>Daily Dairy</h2>
+            <form id="dairyForm">
+                <label for="date">Date:</label>
+                <input type="date" id="date" required>
+                
+                <label for="success">Success Factors:</label>
+                <textarea id="success" rows="3" placeholder="Write your success factors..."></textarea>
+    
+                <label for="dos">Do’s:</label>
+                <textarea id="dos" rows="3" placeholder="List what you should do..."></textarea>
+    
+                <label for="donts">Don’ts:</label>
+                <textarea id="donts" rows="3" placeholder="List what you should avoid..."></textarea>
+    
+                <button type="button" onclick="saveDairyEntry()">Save as File</button>
+            </form>
+        </main>
+
+    <script>
+        function saveDairyEntry() {
+            let date = document.getElementById("date").value;
+            let success = document.getElementById("success").value;
+            let dos = document.getElementById("dos").value;
+            let donts = document.getElementById("donts").value;
+
+            if (!date) {
+                alert("Please select a date.");
+                return;
+            }
+
+            let content = `Date: ${date}\n\nSuccess Factors:\n${success}\n\nDo's:\n${dos}\n\nDon'ts:\n${donts}`;
+
+            let blob = new Blob([content], { type: "text/plain" });
+            let a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = `Dairy_${date}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
